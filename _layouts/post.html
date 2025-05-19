@@ -1,47 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
-{% include head.html %}
 
 <head>
-
   <meta charset="utf-8">
 
   <!-- begin SEO -->
-
-  <title>Yongqian's Website</title>
-  <!-- <link rel="shortcut icon" href="assets/images/cat.ico" type="image/x-icon"> -->
-
+  <title>{{ page.title }} | Yongqian's Website</title>
   <meta property="og:locale" content="en-US">
   <meta property="og:site_name" content="Yongqian's Website">
-  <meta property="og:title" content="About me">
+  <meta property="og:title" content="{{ page.title }}">
 
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
-  <link rel="canonical" href="http://niuoruo.github.io/">
-  <meta property="og:url" content="http://niuoruo.github.io/">
-
-
-
-  <meta property="og:description" content="The personal page of Yongqian Wu">
-
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
 
   <script type="application/ld+json">
     {
       "@context" : "http://schema.org",
-      "@type" : "Person",
-      "name" : "Yongqian Wu (吴勇前)",
-      "url" : "http://localhost:4001",
-      "sameAs" : null
+      "@type" : "BlogPosting",
+      "name" : "{{ page.title }}",
+      "headline" : "{{ page.title }}",
+      "description" : "{{ page.excerpt | strip_html | truncate: 160 }}",
+      "url" : "{{ site.url }}{{ page.url }}",
+      "datePublished" : "{{ page.date | date_to_xmlschema }}"
     }
   </script>
-
-
-
   <!-- end SEO -->
 
-
-  <link href="http://niuoruo.github.io"  title="Yongqian's Website Feed">
-
-  <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,60 +36,52 @@
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
   </script>
 
-  <!-- For all browsers -->
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.a' | relative_url }}">
 
-  <meta http-equiv="cleartype" content="on">
-
-
-  <!-- start custom head snippets -->
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="./assets/css/main.a" />
-
-  <script
-    type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-  <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config"> 
+    MathJax.Hub.Config({ 
+      TeX: { equationNumbers: { autoNumber: "all" } },
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-
-  <!-- end custom head snippets -->
-
 </head>
 
 <body>
+  <!-- 复用导航栏 -->
   <div class="masthead">
     <div class="masthead__inner-wrap">
       <div class="masthead__menu">
         <nav id="site-nav" class="greedy-nav">
-
           <ul class="visible-links">
-            <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://niuoruo.github.io/">Yongqian's
-                Website</a></li>
+            <li class="masthead__menu-item masthead__menu-item--lg">
+              <a href="{{ '/' | relative_url }}">Yongqian's Website</a>
+            </li>
             <li class="masthead__menu-item"><a href="#about-me">About me</a></li>
-            <!-- <li class="masthead__menu-item"><a href="#publications">Publications</a></li> -->
             <li class="masthead__menu-item"><a href="#selected-projects">Projects</a></li>
             <li class="masthead__menu-item"><a href="#selected-awards">Awards</a></li>
-            <li class="masthead__menu-item"><a href="/blog">Blog</a></li>
-            
+            <li class="masthead__menu-item"><a href="{{ '/blog' | relative_url }}">Blog</a></li>
           </ul>
-
         </nav>
       </div>
     </div>
   </div>
 
+  <!-- 博客内容区域 -->
   <div id="main" role="main">
     <article class="page">
       <header>
         <h1 class="page__title">{{ page.title }}</h1>
         <div class="post-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%Y-%m-%d" }}
+          </time>
         </div>
       </header>
 
@@ -113,6 +91,7 @@
     </article>
   </div>
 
-  {% include footer.html %}
+  <!-- 复用页脚（如需） -->
+  <!-- <footer>...</footer> -->
 </body>
 </html>
