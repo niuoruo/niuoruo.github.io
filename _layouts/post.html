@@ -53,32 +53,10 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
 
   <style>
-      /* 调整主要内容容器 #main 的宽度和内边距 */
-      #main {
-        max-width: 90%; /* 减小最大宽度，可调整为85%-95%之间的数值 */
-        margin: 0 auto; /* 居中显示 */
-        padding: 0 20px; /* 减小左右内边距，原可能为30px或更大 */
-      }
-      
-      /* 调整文章内容区域 .page__content */
-      .page__content {
-        max-width: 100%; /* 确保内容撑满容器 */
-      }
-      
-      /* 响应式优化：不同屏幕尺寸的适配 */
-      @media screen and (min-width: 1200px) {
-        #main {
-          max-width: 85%; /* 大屏幕进一步缩小宽度 */
-        }
-      }
-      
-      @media screen and (max-width: 768px) {
-        #main {
-          padding: 0 10px; /* 小屏幕减小内边距 */
-        }
-      }
-    </style>
-</head>
+    code, pre {
+      font-size: 16px;
+    }
+  </style>
 
 <body>
   <!-- 复用导航栏 -->
@@ -101,8 +79,8 @@
   </div>
 
   <!-- 博客内容区域 -->
-  <div id="main" role="main" style="margin: 0;"> <!-- 减小左右边缘距离 -->
-    <article class="page" style="margin-top: 50px;"> <!-- 增大与标题栏的距离 -->
+  <div id="main" role="main" style="margin: 0;">
+    <article class="page" style="margin-top: 50px;">
       <header>
         <h1 class="page__title">{{ page.title }}</h1>
         <div class="post-meta">
