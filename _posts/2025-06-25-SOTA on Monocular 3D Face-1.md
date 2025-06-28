@@ -5,8 +5,6 @@ date: 2024-06-25 20:00:00 +0800
 categories: Avator
 ---
 
-# State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications 论文阅读（一）
-
 了解到这篇综述比较系统的讲解了单目人脸重建的发展历史，在学习数字人的同时做一些记录，加深一点记忆，同时我也会根据其他参考文献更详细地讨论一些内容，这一篇文章主要讲述**引言**与**逆向渲染模型**。
 
 ![image-20250627102040834](https://niuoruo.github.io/assets/images/image-20250627102040834.png)

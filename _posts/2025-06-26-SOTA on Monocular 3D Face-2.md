@@ -5,8 +5,6 @@ date: 2024-06-26 21:20:00 +0800
 categories: Avator
 ---
 
-# State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications 论文阅读（二）
-
 上一篇讲述了我们的数据——图像是如何采集的，本篇主要聊一聊对重建目标——**人脸的模型化**。
 
 ![image-20250627102040834](https://niuoruo.github.io/assets/images/image-20250627102040834.png)
