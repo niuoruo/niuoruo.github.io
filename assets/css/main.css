@@ -9624,28 +9624,3 @@ screen and (max-height: 300px) {
   overflow-x: auto;
 }
 
-@media (max-width: 768px) {
-  .masthead__menu {
-    overflow-x: auto; /* 小屏幕时允许横向滚动 */
-    white-space: nowrap; /* 防止导航项换行 */
-  }
-  .greedy-nav ul.visible-links {
-    padding-bottom: 5px; /* 滚动条显示空间 */
-  }
-  .greedy-nav ul.visible-links li {
-    display: inline-block; /* 导航项横向排列 */
-    float: none;
-  }
-}
-
-#main {
-  margin: 0 auto; /* 水平居中 */
-  padding: 0 20px; /* 两侧留白，适配不同屏幕 */
-}
-article.page {
-  margin-top: 2rem; /* 使用rem相对单位，随字体大小缩放 */
-}
-
-code, pre {
-  font-size: 0.875rem; /* 14px，随父元素字体缩放 */
-}
