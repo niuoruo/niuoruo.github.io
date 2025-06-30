@@ -9615,20 +9615,34 @@ screen and (max-height: 300px) {
 /* 当屏幕宽度大于 768px 时 */
 @media (min-width: 768px) {
   .post-content {
-    max-width: 900px; /* 增加宽度 */
+    max-width: 1200px; /* 增加宽度 */
   }
 }
 
 /* 当屏幕宽度大于 1200px 时 */
 @media (min-width: 1200px) {
   .post-content {
-    max-width: 1300px; /* 进一步增加宽度 */
+    max-width: 1600px; /* 进一步增加宽度 */
   }
 }
 
 /* 当屏幕宽度大于 1600px 时 */
 @media (min-width: 1600px) {
   .post-content {
-    max-width: 1800px; /* 适应超宽屏 */
+    max-width: 2000px; /* 适应超宽屏 */
+  }
+}
+
+/* 当屏幕宽度大于 2000px 时 */
+@media (min-width: 2000px) {
+  .post-content {
+    max-width: 2400px; /* 适应超宽屏 */
+  }
+}
+
+/* 当屏幕宽度大于 2400px 时 */
+@media (min-width: 2400px) {
+  .post-content {
+    max-width: 3000px; /* 适应超宽屏 */
   }
 }
