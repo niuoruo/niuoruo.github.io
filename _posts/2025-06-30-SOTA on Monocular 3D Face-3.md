@@ -57,7 +57,7 @@ $$Epoint(\mathcal{P})=\frac{1}{|\mathcal{V}|}\sum_{p\in\mathcal{V}}\|X_\mathcal{
 
 其中$XS(\mathcal{P, p})-XI(\mathcal{p})$是RGB-D测量的三维位置与相应三维模型之间的差异。$V$ 表示用于比较的所有可见像素位置。一般情况下，将这个计算简化为每个顶点计算而非对每个像素计算。
 
-为了提高鲁棒性，通常会使用一阶表面近似距离，这种方法在很多激光SLAM中也有使用，如FAST-LIO，将原本的点与点匹配变更为点与面匹配，点优化的梯度方向为模型面的法向，能够显著提高鲁棒性
+为了提高鲁棒性，通常会使用一阶表面近似距离，这种方法在很多激光SLAM中也有使用，如[FAST-LIO](https://github.com/hku-mars/FAST_LIO)，将原本的点与点匹配变更为点与面匹配，点优化的梯度方向为模型面的法向，能够显著提高鲁棒性
 
 $$E_{\mathrm{plane}}(\mathcal{P})=\frac{1}{|\mathcal{V}|}\sum_{\mathcal{p}\in\mathcal{V}}\left[N_{\mathcal{S}}(\mathcal{P,p})^\top\cdot(X_{\mathcal{S}}(\mathcal{P},\mathcal{p})-X_{\mathcal{I}}(\mathcal{p}))\right]^2$$
 
