@@ -9608,21 +9608,12 @@ screen and (max-height: 300px) {
 /* Blog Styles */
 .post-content {
   width: 100%; /* 让内容区域默认占据父容器的全部宽度 */
-  max-width: 1200px; /* 仍然保留一个最大限制，防止在非常小的设备上内容太宽 */
+  max-width: 10000px; /* 仍然保留一个最大限制，防止在非常小的设备上内容太宽 */
   padding-left: 15px;  /* 左内边距，防止内容贴边 */
   padding-right: 15px; /* 右内边距，防止内容贴边 */
   margin: 0 auto;      /* 保持居中 */
   line-height: 1.6;
   box-sizing: border-box; /* 确保 padding 不会增加总宽度 */
-}
-
-/* 当屏幕宽度大于 768px 时 */
-@media (min-width: 768px) {
-  .post-content {
-    max-width: 1200px; /* 在大屏幕上应用您设置的更大的最大宽度 */
-    padding-left: 0;   /* 在大屏幕上取消内边距，让 margin: 0 auto 处理居中和空间 */
-    padding-right: 0;
-  }
 }
 
 /* 当屏幕宽度大于 1200px 时 */
