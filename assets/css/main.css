@@ -9605,29 +9605,30 @@ screen and (max-height: 300px) {
     }
 }
 
+/* Blog Styles */
 .post-content {
-  max-width: 800px; /* 默认最大宽度，适用于中小型屏幕 */
+  max-width: 800px; /* 默认宽度，例如手机或平板竖屏 */
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* 适用于宽度大于 768px 的屏幕 (例如平板电脑横屏或小型笔记本) */
+/* 当屏幕宽度大于 768px 时 */
 @media (min-width: 768px) {
   .post-content {
-    max-width: 900px; /* 增加最大宽度 */
+    max-width: 900px; /* 增加宽度 */
   }
 }
 
-/* 适用于宽度大于 1200px 的屏幕 (例如大型显示器) */
+/* 当屏幕宽度大于 1200px 时 */
 @media (min-width: 1200px) {
   .post-content {
-    max-width: 1100px; /* 进一步增加最大宽度 */
+    max-width: 1300px; /* 进一步增加宽度 */
   }
 }
 
-/* 适用于宽度大于 1600px 的屏幕 (超宽显示器) */
+/* 当屏幕宽度大于 1600px 时 */
 @media (min-width: 1600px) {
   .post-content {
-    max-width: 1200px; /* 甚至可以设置一个更宽的固定值，或者 70vw */
+    max-width: 1800px; /* 适应超宽屏 */
   }
 }
