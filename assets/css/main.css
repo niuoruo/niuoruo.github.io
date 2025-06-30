@@ -9607,7 +9607,7 @@ screen and (max-height: 300px) {
 
 /* Blog Styles */
 .post-content {
-  max-width: 800px;
+  max-width: 90%; 
   margin: 0 auto;
   line-height: 1.6;
 }
