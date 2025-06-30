@@ -91,7 +91,7 @@ $$E(\mathcal{P})=\frac{1}{|\mathcal{V}|}\sum_{\mathbf{p}\in\mathcal{V}}\Psi(\mat
 
 其中$\Psi:\mathbb{R}^n\to\mathbb{R}_{\geq0}$代表一个**将观测量与模型的差异$\mathbf{r}(\mathcal{P},\mathbf{p})=C_{\mathcal{S}}(\mathcal{P},\mathbf{p})-C_{\mathcal{I}}(\mathbf{p})$映射为标量**的函数，联系一下上面所说的，这可以是稀疏特征点在法向距离上的距离和，可以是顶点的颜色误差和或三维位置误差和，也可以是正则化项——到平均脸型的距离和。
 
-最常见的度量是$\ell_2\mathrm{-norm}(\Psi(\mathbf{x})=\|\mathbf{x}\|_2^2)$。在这种情况下，优化问题归结为一个最小二乘问题。因此，上式可以改写为：
+最常见的度量是$\ell_2\mathrm{-norm}(\Psi(\mathbf{x})=\Vert\mathbf{x}\Vert_2^2)$。在这种情况下，优化问题归结为一个最小二乘问题。因此，上式可以改写为：
 
 $$E(\mathcal{P})=\frac{1}{|\mathcal{V}|}\sum_{\mathbf{p}\in\mathcal{V}}||\mathbf{r}(\mathcal{P},\mathbf{p})||_2^2=||F(\mathcal{P})||_2^2$$
 
@@ -236,7 +236,7 @@ $$E(\mathcal{P})=\frac{1}{|\mathcal{V}|}\sum_{\mathbf{p}\in\mathcal{V}}||\mathbf
     
     $$\mathcal{P}_{k+1}=\mathcal{P}_k-(\boldsymbol{J}(\mathcal{P}_k)^T\boldsymbol{J}(\mathcal{P}_k)+\lambda\boldsymbol{D}^T\boldsymbol{D})^{-1}\boldsymbol{J}(\mathcal{P}_k)^TF(\mathcal{P}_k)$$
 
-另一种度量使用$\ell_{2,1}\mathrm{-norm~}(\Psi(\mathbf{x})=\|\mathbf{x}\|_2^1)$，这种方法可以看做先按照$L_2$范数对每个元素求平方，再将每行所有元素加起来，得到一个列向量，这样**将每一行的元素都关联起来**，优化的目标更**倾向于将一整行的数值都变为0，也就是行稀疏**：
+另一种度量使用$\ell_{2,1}\mathrm{-norm~}(\Psi(\mathbf{x})=\Vert\mathbf{x}\Vert_2^1)$，这种方法可以看做先按照$L_2$范数对每个元素求平方，再将每行所有元素加起来，得到一个列向量，这样**将每一行的元素都关联起来**，优化的目标更**倾向于将一整行的数值都变为0，也就是行稀疏**：
 
 $$||\mathbf{r}(\mathcal{P},\mathbf{p})||_2^1=\underbrace{(||\mathbf{r}(\mathcal{P},\mathbf{p})||_2^1)^{-1}}_{constant}\cdot\underbrace{||\mathbf{r}(\mathcal{P},\mathbf{p})||_2^2}_{least-squares}$$
 
