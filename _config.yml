@@ -1,1 +1,6 @@
 theme: jekyll-theme-architect
+
+markdown: kramdown
+kramdown:
+  input: GFM  # GitHub Flavored Markdown
+  hard_wrap: false
