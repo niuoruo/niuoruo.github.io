@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "State of the Art on Monocular 3D Face Reconstruction, Tracking, and Applications 论文阅读（四）"
-date: 2024-06-30 20:30:00 +0800
+date: 2025-06-30 20:30:00 +0800
 categories: Avator
 ---
 
