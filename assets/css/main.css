@@ -9608,7 +9608,6 @@ screen and (max-height: 300px) {
 /* Blog Styles */
 .post-content {
   width: 100%; /* 让内容区域默认占据父容器的全部宽度 */
-  max-width: 800px; /* 仍然保留一个最大限制，防止在非常小的设备上内容太宽 */
   padding-left: 15px;  /* 左内边距，防止内容贴边 */
   padding-right: 15px; /* 右内边距，防止内容贴边 */
   margin: 0 auto;      /* 保持居中 */
