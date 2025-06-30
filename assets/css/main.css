@@ -9608,7 +9608,7 @@ screen and (max-height: 300px) {
 /* Blog Styles */
 .post-content {
   width: 100%; /* 让内容区域默认占据父容器的全部宽度 */
-  max-width: 10000px; /* 仍然保留一个最大限制，防止在非常小的设备上内容太宽 */
+  max-width: 800px; /* 仍然保留一个最大限制，防止在非常小的设备上内容太宽 */
   padding-left: 15px;  /* 左内边距，防止内容贴边 */
   padding-right: 15px; /* 右内边距，防止内容贴边 */
   margin: 0 auto;      /* 保持居中 */
@@ -9637,135 +9637,38 @@ screen and (max-height: 300px) {
   }
 }
 
-/* 当屏幕宽度大于 2400px 时 */
-@media (min-width: 2400px) {
-  .post-content {
-    max-width: 3000px; /* 适应超宽屏 */
+/* 找到类似 .page 或 #main 的样式，并增加它们的宽度 */
+.page {
+  max-width: 100%; /* 或者设置为一个您希望的足够大的像素值，例如 1400px */
+  padding: 0 15px; /* 添加左右内边距以防止内容贴边，根据需要调整 */
+  margin: 0 auto; /* 保持居中 */
+  box-sizing: border-box; /* 确保 padding 不会增加总宽度 */
+}
+
+/* 同样，为 .page 添加响应式设计，使其在大屏幕上更宽 */
+@media (min-width: 768px) {
+  .page {
+    max-width: 1200px; /* 在大屏幕上允许 .page 更宽 */
+    padding: 0; /* 在大屏幕上移除 padding */
   }
 }
 
-/* 当屏幕宽度大于 2800px 时 */
-@media (min-width: 2800px) {
-  .post-content {
-    max-width: 3400px; /* 适应超宽屏 */
+@media (min-width: 1200px) {
+  .page {
+    max-width: 1600px; /* 进一步增加宽度 */
   }
 }
 
-/* 当屏幕宽度大于 3200px 时 */
-@media (min-width: 3200px) {
-  .post-content {
-    max-width: 3800px; /* 适应超宽屏 */
+/* 当屏幕宽度大于 1600px 时 */
+@media (min-width: 1600px) {
+  .page {
+    max-width: 2000px; /* 进一步增加宽度 */
   }
 }
 
-/* 当屏幕宽度大于 3600px 时 */
-@media (min-width: 3600px) {
-  .post-content {
-    max-width: 4200px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 4000px 时 */
-@media (min-width: 4000px) {
-  .post-content {
-    max-width: 4600px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 4400px 时 */
-@media (min-width: 4400px) {
-  .post-content {
-    max-width: 5000px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 4800px 时 */
-@media (min-width: 4800px) {
-  .post-content {
-    max-width: 5400px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 5200px 时 */
-@media (min-width: 5200px) {
-  .post-content {
-    max-width: 5800px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 5600px 时 */
-@media (min-width: 5600px) {
-  .post-content {
-    max-width: 6200px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 6000px 时 */
-@media (min-width: 6000px) {
-  .post-content {
-    max-width: 6600px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 6400px 时 */
-@media (min-width: 6400px) {
-  .post-content {
-    max-width: 7000px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 6800px 时 */
-@media (min-width: 6800px) {
-  .post-content {
-    max-width: 7400px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 7200px 时 */
-@media (min-width: 7200px) {
-  .post-content {
-    max-width: 7800px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 7600px 时 */
-@media (min-width: 7600px) {
-  .post-content {
-    max-width: 8200px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 8000px 时 */
-@media (min-width: 8000px) {
-  .post-content {
-    max-width: 8600px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 8400px 时 */
-@media (min-width: 8400px) {
-  .post-content {
-    max-width: 9000px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 8800px 时 */
-@media (min-width: 8800px) {
-  .post-content {
-    max-width: 9400px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 9200px 时 */
-@media (min-width: 9200px) {
-  .post-content {
-    max-width: 9800px; /* 适应超宽屏 */
-  }
-}
-
-/* 当屏幕宽度大于 9600px 时 */
-@media (min-width: 9600px) {
-  .post-content {
-    max-width: 10000px; /* 适应超宽屏 */
+/* 当屏幕宽度大于 2000px 时 */
+@media (min-width: 2000px) {
+  .page {
+    max-width: 2400px; /* 适应超宽屏 */
   }
 }
